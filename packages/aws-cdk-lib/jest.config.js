@@ -3,10 +3,11 @@ const baseConfig = require('@aws-cdk/cdk-build-tools/config/jest.config');
 /** @type {import('ts-jest').JestConfigWithTsJest} */
 module.exports = {
   ...baseConfig,
+  coverageReporters: ["html"],
 
   // Different than usual
   testMatch: [
-    '<rootDir>/**/test/**/?(*.)+(test).ts',
+    '<rootDir>/**/aws-ecs-patterns/test/**/?(*.)+(test).ts',
   ],
 
   coverageThreshold: {
